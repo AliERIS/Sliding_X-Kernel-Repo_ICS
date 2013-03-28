@@ -6,8 +6,8 @@ echo "-- Copying zImage File ..."
 cp ../kernel/arch/arm/boot/zImage zImage
 echo "-- Copying WiFi Modules ..."
 # Get Wi-Fi Modules
-cp ../kernel/net/compat-wireless/drivers/staging/cw1200/cw1200_core.ko ../ramdisk/lib/modules/
-cp ../kernel/net/compat-wireless/drivers/staging/cw1200/cw1200_wlan.ko ../ramdisk/lib/modules/
+cp ../kernel/net/compat-wireless/drivers/staging/cw1200/cw1200_core.ko ../ramdisk-cm/lib/modules/
+cp ../kernel/net/compat-wireless/drivers/staging/cw1200/cw1200_wlan.ko ../ramdisk-cm/lib/modules/
 echo "-- Packing Ramdisk ..."
 # Pack Ramdisk.
 cd ../ramdisk-cm

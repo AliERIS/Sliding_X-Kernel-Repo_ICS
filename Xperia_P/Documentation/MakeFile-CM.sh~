@@ -6,8 +6,8 @@ echo "-- Copying zImage File ..."
 cp ../kernel/arch/arm/boot/zImage zImage
 echo "-- Copying WiFi Modules ..."
 # Get Wi-Fi Modules
-cp ../kernel/net/compat-wireless/drivers/staging/cw1200/cw1200_core.ko ../ramdisk/lib/modules/
-cp ../kernel/net/compat-wireless/drivers/staging/cw1200/cw1200_wlan.ko ../ramdisk/lib/modules/
+cp ../kernel/net/compat-wireless/drivers/staging/cw1200/cw1200_core.ko ../ramdisk-cm/lib/modules/
+cp ../kernel/net/compat-wireless/drivers/staging/cw1200/cw1200_wlan.ko ../ramdisk-cm/lib/modules/
 echo "-- Packing Ramdisk ..."
 # Pack Ramdisk.
 cd ../ramdisk-cm
@@ -30,7 +30,7 @@ echo "-- Cleaning Up Temp Files ..."
 rm CWM.zip
 #Create CWM zip file.
 echo "-- Creating CWM Flashable File For This Kernel ..."
-zip -r CWM.zip kernel.elf META-INF
+zip -r CWM-CM.zip kernel.elf META-INF
 #Clean Up.
 rm ramdisk.img
 rm zImage

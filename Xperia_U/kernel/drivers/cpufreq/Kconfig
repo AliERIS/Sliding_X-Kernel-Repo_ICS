@@ -211,6 +211,10 @@ config CPU_FREQ_DEFAULT_GOV_LULZACTIVEQ
 	bool "lulzactiveq"
 	select CPU_FREQ_GOV_LULZACTIVEQ
 
+config CPU_FREQ_DEFAULT_GOV_ONDEMANDQ
+	bool "ondemandq"
+	select CPU_FREQ_GOV_ONDEMANDQ
+
 endchoice
 
 config CPU_FREQ_GOV_PERFORMANCE
@@ -423,7 +427,7 @@ config CPU_FREQ_GOV_NIGHTMARE
 	tristate "'nightmare' cpufreq policy governor"
 
 config CPU_FREQ_GOV_ONDEMANDQ
-	tristate "'ondemand' cpufreq policy governor"
+	tristate "'ondemandq' cpufreq policy governor"
 	help
 	   Based on ondemand,hotplug in suspend.
 

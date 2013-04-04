@@ -2,7 +2,7 @@
 
 MAC_FILE=/data/etc/wlan_macaddr
 COMMAND="/system/bin/insmod"
-MOD_PATH="/lib/modules/"
+MOD_PATH="/lib/modules"
 MOD_CORE="cw1200_core.ko"
 MOD_WLAN="cw1200_wlan.ko"
 ARG="macaddr="

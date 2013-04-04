@@ -241,10 +241,6 @@ on boot
     chown system system /sys/bus/i2c/devices/2-0054/cycle
     chown system system /sys/bus/i2c/devices/2-0054/filter
 
-    # Permissions for LM3533 Light Sensor
-    chown system system /sys/devices/platform/nmk-i2c.2/i2c-2/2-0036/als_enable
-    chown system system /sys/devices/platform/nmk-i2c.2/i2c-2/2-0040/als_result
-
     # Permissions for LM356x flash LED
     chown system system /sys/bus/i2c/devices/2-0053/torch_enable
     chown system system /sys/bus/i2c/devices/2-0053/torch_current
@@ -265,8 +261,6 @@ on boot
     chown system system /sys/bus/i2c/devices/2-0053/privacy_enable
     chown system system /sys/bus/i2c/devices/2-0053/privacy_current
 
-    chown system system /sys/devices/platform/nmk-i2c.2/i2c-2/2-0040/als_on
-    chown system system /sys/devices/platform/nmk-i2c.2/i2c-2/2-0040/als_result
     chown system system /sys/devices/platform/nmk-i2c.2/i2c-2/2-0040/pattern_data
     chown system system /sys/devices/platform/nmk-i2c.2/i2c-2/2-0040/pattern_delay
     chown system system /sys/devices/platform/nmk-i2c.2/i2c-2/2-0040/pattern_duration_secs
@@ -311,8 +305,7 @@ on boot
     chown root input /sys/devices/spi3/spi9.0/baseline_reset
 
     #Load wifi modules and MAC setup
-    #exec /system/bin/install_wlan
-    
+    exec /system/bin/install_wlan
 
     # power-management
     write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor ondemand
@@ -517,7 +510,7 @@ service modemcatcher /system/bin/modemcatcher -f
     class main
     user root
     socket modemcatcher stream 0660 root root
-
+	
 # Install CW1200 WLAN core driver
 service wlan_core /system/bin/sh /sbin/install_wlan_core.sh
     user root

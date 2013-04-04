@@ -1,4 +1,5 @@
 #!/bin/sh
+
 echo "Getting Files Ready ..."
 echo "-------------------------------"
 echo "-- Copying zImage File ..."
